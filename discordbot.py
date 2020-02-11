@@ -12,6 +12,12 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+@client.event
+async def on_ready():
+    CHANNEL_ID = 676772811595055136 # 任意のチャンネルID(int)
+    channel = client.get_channel(CHANNEL_ID)
+    await channel.send('おはよう！')
+
 
 @bot.command()
 async def ping(ctx):
