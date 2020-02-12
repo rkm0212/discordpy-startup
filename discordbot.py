@@ -21,7 +21,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('norplellll')
+    await ctx.send('norple')
 
 
 bot.run(token)
